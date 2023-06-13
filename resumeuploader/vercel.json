@@ -1,0 +1,16 @@
+{
+
+        "builds": [{
+            "src": "rresumeuploader/wsgi.py",
+            "use": "@vercel/python",
+            "config": { "maxLambaSize": "15mb", "runtime": "python3.9" }
+        }],
+        "routes": [
+            {
+                    "src": "/(.*)",
+                    "dest": "resumeuploader/wsgi.py"
+            }
+        ]
+
+
+}
